@@ -100,7 +100,7 @@ def infer(image):
 title = "Deblur blurry images."
 description = "Demo for deblurring."
 
-iface = gr.Interface(
+interface = gr.Interface(
     infer,
     inputs="image",
     outputs=gr.Image().style(height=242),
@@ -114,4 +114,4 @@ iface = gr.Interface(
         ["110fromGOPR1087.MP4.png"],
     ],
 )
-iface.launch(debug=True, share=True)
+interface.launch(debug=True, share=True)
