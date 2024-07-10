@@ -103,7 +103,7 @@ description = "Demo for deblurring."
 interface = gr.Interface(
     infer,
     inputs="image",
-    outputs=gr.Image().style(height=242),
+    outputs=gr.Image().scale(height=242),
     title=title,
     description=description,
     allow_flagging="never",
@@ -114,4 +114,4 @@ interface = gr.Interface(
         ["110fromGOPR1087.MP4.png"],
     ],
 )
-interface.launch(debug=True, share=True)
+# interface.launch(debug=True, share=True)
