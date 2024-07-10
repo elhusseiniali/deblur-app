@@ -66,8 +66,9 @@ def init_new_model(input_img):
     configs.update(
         {"input_resolution": (input_img.shape[1], input_img.shape[2])}
     )
-    new_model = Model(**configs)
-    new_model.set_weights(_MODEL.get_weights())
+    with tf.device("/GPU:0"):
+        new_model = Model(**configs)
+        new_model.set_weights(_MODEL.get_weights())
     return new_model
 
 
