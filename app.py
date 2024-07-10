@@ -103,7 +103,7 @@ description = "Demo for deblurring."
 interface = gr.Interface(
     infer,
     inputs="image",
-    outputs=gr.Image().scale(height=242),
+    outputs=gr.Image(),
     title=title,
     description=description,
     allow_flagging="never",
